@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GPR Hospital | Trusted Healthcare & Medical Services</title>
+  <meta name="description" content="Discover trusted healthcare at MediCare Hospital. Find expert doctors, medical departments, emergency care and book appointments online." />
+  <meta name="keywords" content="MediCare Hospital, Doctors, Book Appointment, Healthcare Delhi, Emergency Care, Cardiology, Neurology" />
+  <meta property="og:title" content="MediCare Hospital | Trusted Healthcare & Medical Services" />
+  <meta property="og:description" content="Compassionate doctors. Advanced technology. A healthier tomorrow for you and your family." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= 1. TOP UTILITY BAR ================= -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-left">
+        <span class="care-badge"><i class="fa-solid fa-heart"></i> Care Today</span>
+        <span class="divider">•</span>
+        <span>A Healthier Tomorrow</span>
+      </div>
+      <div class="top-right">
+        <a href="#contact" class="top-link"><i class="fa-solid fa-location-dot"></i> Locate Us</a>
+        <a href="#portal" class="top-link" onclick="openPatientPortal()"><i class="fa-solid fa-user-circle"></i> Patient Portal</a>
+        <a href="#insurance" class="top-link"><i class="fa-solid fa-shield-halved"></i> Insurance</a>
+        <div class="lang-selector">
+          <span><i class="fa-solid fa-globe"></i> EN</span>
+          <i class="fa-solid fa-chevron-down arrow-icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 2. MAIN NAVIGATION ================= -->
+  <header class="main-header" id="navbar">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" aria-label="MediCare Hospital Home">
+        <div class="logo-icon">
+          <i class="fa-solid fa-plus-circle"></i>
+        </div>
+        <div class="logo-text">
+          <div class="brand-name">GPR</div>
+          <div class="brand-subtitle">HOSPITAL</div>
+          <div class="brand-tagline">People | Care | Life</div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#doctors" class="nav-link">Find a Doctor</a></li>
+          <li><a href="#departments" class="nav-link">Departments</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#why-us" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="search-toggle-btn" id="searchToggle" aria-label="Open Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="btn btn-primary book-btn" onclick="openBookingModal()">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span>Book Appointment</span>
+        </button>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Search Dropdown Box -->
+  <div class="search-dropdown-overlay" id="searchDropdown">
+    <div class="container search-bar-container">
+      <i class="fa-solid fa-magnifying-glass search-inner-icon"></i>
+      <input type="text" id="globalSearchInput" placeholder="Search for doctors, clinical departments, health checkups..." />
+      <button class="close-search-btn" id="closeSearchBtn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+  </div>
+
+  <main>
+    <!-- ================= 3. HERO SECTION ================= -->
+    <section class="hero-section" id="home">
+      <div class="container hero-inner">
+        <!-- Hero Content -->
+        <div class="hero-content">
+          <div class="badge-priority">Your Health, Our Priority</div>
+          <h1 class="hero-title">
+            Trusted Care.<br>
+            Better Health.<br>
+            <span class="highlight-cyan">Every Day.</span>
+          </h1>
+          <p class="hero-desc">
+            Compassionate doctors. Advanced technology. A healthier tomorrow for you and your family.
+          </p>
+
+          <div class="hero-buttons">
+            <button class="btn btn-primary" onclick="openBookingModal()">
+              <i class="fa-regular fa-calendar-check"></i> Book Appointment <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
+            <a href="#doctors" class="btn btn-secondary">
+              <i class="fa-solid fa-user-doctor"></i> Find a Doctor
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="hero-trust-badges">
+            <div class="trust-item">
+              <div class="trust-icon"><i class="fa-solid fa-user-nurse"></i></div>
+              <span>Experienced Doctors</span>
+            </div>
+            <div class="trust-item">
+              <div class="trust-icon"><i class="fa-solid fa-hospital"></i></div>
+              <span>Modern Facilities</span>
+            </div>
+            <div class="trust-item">
+              <div class="trust-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+              <span>Patient-Centered Care</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Area -->
+        <div class="hero-visual">
+          <div class="hero-image-wrap">
+            <div class="hero-badge-script">Healthier People, Happier Lives</div>
+            <img 
+              src="pratish.jpeg" 
+              alt="MediCare Indian Medical Team" 
+              class="hero-img-main"
+            />
+            
+            <!-- Floating Emergency Care Card -->
+            <a href="tel:18001234567" class="hero-emergency-card" aria-label="Call emergency 24/7">
+              <div class="emergency-icon-pulse">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <div class="emergency-info">
+                <div class="emergency-label">Emergency Care</div>
+                <div class="emergency-number">+91 8083198071</div>
+                <div class="emergency-sub">24/7 • Always Here For You</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4. QUICK ACTION CARDS ================= -->
+    <section class="quick-actions-section">
+      <div class="container">
+        <div class="quick-grid">
+          <!-- Card 1 -->
+          <div class="quick-card tint-blue" onclick="openBookingModal()">
+            <div class="quick-card-header">
+              <div class="quick-icon"><i class="fa-solid fa-calendar-days"></i></div>
+              <button class="arrow-circle-btn" aria-label="Book appointment action"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <h3 class="quick-title">Book Appointment</h3>
+            <p class="quick-desc">Schedule your visit with our specialists</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="quick-card tint-cyan" onclick="document.getElementById('doctors').scrollIntoView({behavior:'smooth'})">
+            <div class="quick-card-header">
+              <div class="quick-icon"><i class="fa-solid fa-user-doctor"></i></div>
+              <button class="arrow-circle-btn" aria-label="Find a doctor action"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <h3 class="quick-title">Find a Doctor</h3>
+            <p class="quick-desc">Search by name, specialty or condition</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="quick-card tint-orange" onclick="document.getElementById('departments').scrollIntoView({behavior:'smooth'})">
+            <div class="quick-card-header">
+              <div class="quick-icon"><i class="fa-solid fa-hospital-user"></i></div>
+              <button class="arrow-circle-btn" aria-label="Explore departments action"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <h3 class="quick-title">Departments</h3>
+            <p class="quick-desc">Explore our wide range of medical services</p>
+          </div>
+
+          <!-- Card 4 -->
+          <a href="tel:18001234567" class="quick-card tint-red">
+            <div class="quick-card-header">
+              <div class="quick-icon"><i class="fa-solid fa-truck-medical"></i></div>
+              <button class="arrow-circle-btn" aria-label="Emergency call action"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <h3 class="quick-title">Emergency Care</h3>
+            <p class="quick-desc">Immediate medical attention 24/7</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 5. MEDICAL DEPARTMENTS ================= -->
+    <section class="departments-section" id="departments">
+      <div class="container">
+        <div class="section-header-flex">
+          <div>
+            <h2 class="section-title">Our Medical Departments</h2>
+            <p class="section-subtitle">Comprehensive care for every stage of life</p>
+          </div>
+          <a href="#departments" class="view-all-link">View All Departments <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="dept-search-wrapper">
+          <i class="fa-solid fa-filter"></i>
+          <input type="text" id="deptFilterInput" placeholder="Quick filter departments (e.g. Heart, Child, Brain)..." onkeyup="filterDepartments()" />
+        </div>
+
+        <div class="departments-grid" id="departmentsGrid">
+          <div class="dept-card" data-name="Cardiology Heart">
+            <div class="dept-icon-circle"><i class="fa-solid fa-heart-pulse"></i></div>
+            <span class="dept-name">Cardiology</span>
+          </div>
+          <div class="dept-card" data-name="Neurology Brain">
+            <div class="dept-icon-circle"><i class="fa-solid fa-brain"></i></div>
+            <span class="dept-name">Neurology</span>
+          </div>
+          <div class="dept-card" data-name="Orthopedics Bone Joint">
+            <div class="dept-icon-circle"><i class="fa-solid fa-bone"></i></div>
+            <span class="dept-name">Orthopedics</span>
+          </div>
+          <div class="dept-card" data-name="Pediatrics Child">
+            <div class="dept-icon-circle"><i class="fa-solid fa-baby"></i></div>
+            <span class="dept-name">Pediatrics</span>
+          </div>
+          <div class="dept-card" data-name="Gynecology Women">
+            <div class="dept-icon-circle"><i class="fa-solid fa-venus"></i></div>
+            <span class="dept-name">Gynecology</span>
+          </div>
+          <div class="dept-card" data-name="General Medicine Doctor">
+            <div class="dept-icon-circle"><i class="fa-solid fa-stethoscope"></i></div>
+            <span class="dept-name">General Medicine</span>
+          </div>
+          <div class="dept-card" data-name="Oncology Cancer">
+            <div class="dept-icon-circle"><i class="fa-solid fa-ribbon"></i></div>
+            <span class="dept-name">Oncology</span>
+          </div>
+          <div class="dept-card" data-name="Dermatology Skin">
+            <div class="dept-icon-circle"><i class="fa-solid fa-hand-dots"></i></div>
+            <span class="dept-name">Dermatology</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 6. EXPERT DOCTORS SECTION ================= -->
+    <section class="doctors-section" id="doctors">
+      <div class="container">
+        <div class="section-header-flex">
+          <div>
+            <h2 class="section-title">Our Expert Doctors</h2>
+            <p class="section-subtitle">Meet our highly qualified and experienced specialists</p>
+          </div>
+          <a href="#doctors" class="view-all-link">View All Doctors <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Doctor live search -->
+        <div class="doctor-filter-bar">
+          <div class="filter-input-wrap">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="doctorSearchInput" placeholder="Search doctor by name or specialty..." onkeyup="filterDoctors()" />
+          </div>
+        </div>
+
+        <div class="doctors-grid" id="doctorsGrid">
+          <!-- Doctor 1 -->
+          <div class="doctor-card" data-name="Dr. Rohit Sharma" data-spec="Cardiologist Cardiology">
+            <div class="doctor-img-box">
+              <img src="aditya.jpeg" alt="Dr. Rohit Sharma" />
+            </div>
+            <div class="doctor-body">
+              <h3 class="doctor-name">Dr. Aditya Kumar</h3>
+              <div class="doctor-spec">Cardiologist</div>
+              <div class="doctor-qual">MBBS, MD (Cardiology)</div>
+              <div class="doctor-rating">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="rating-text">4.9 (320+)</span>
+              </div>
+              <button class="btn-profile" onclick="openDoctorModal('Dr. Rohit Sharma', 'Cardiologist', 'MBBS, MD (Cardiology)', '4.9', '320+', '15+ years of cardiology experience in intervention, angioplasty, and preventative cardiology.')">
+                View Profile <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Doctor 2 -->
+          <div class="doctor-card" data-name="Dr. Priya Verma" data-spec="Neurologist Neurology">
+            <div class="doctor-img-box">
+              <img src="aman.jpeg" alt="Dr. Priya Verma" />
+            </div>
+            <div class="doctor-body">
+              <h3 class="doctor-name">Dr. Aman Kumar</h3>
+              <div class="doctor-spec">Neurologist</div>
+              <div class="doctor-qual">MBBS, MD (Neurology)</div>
+              <div class="doctor-rating">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="rating-text">4.8 (280+)</span>
+              </div>
+              <button class="btn-profile" onclick="openDoctorModal('Dr. Priya Verma', 'Neurologist', 'MBBS, MD (Neurology)', '4.8', '280+', 'Renowned neurologist specialized in neurovascular disorders, epilepsy, and neurological rehabilitation.')">
+                View Profile <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Doctor 3 -->
+          <div class="doctor-card" data-name="Dr. Amit Kumar" data-spec="Orthopedic Surgeon Orthopedics">
+            <div class="doctor-img-box">
+              <img src="guddu.jpeg" alt="Dr. Amit Kumar" />
+            </div>
+            <div class="doctor-body">
+              <h3 class="doctor-name">Dr. Abhay Anand</h3>
+              <div class="doctor-spec">Orthopedic Surgeon</div>
+              <div class="doctor-qual">MBBS, MS (Orthopedics)</div>
+              <div class="doctor-rating">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="rating-text">4.9 (210+)</span>
+              </div>
+              <button class="btn-profile" onclick="openDoctorModal('Dr. Amit Kumar', 'Orthopedic Surgeon', 'MBBS, MS (Orthopedics)', '4.9', '210+', 'Expert in total knee/hip replacements, arthroscopy, and sports trauma management.')">
+                View Profile <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Doctor 4 -->
+          <div class="doctor-card" data-name="Dr. Sneha Gupta" data-spec="Pediatrician Pediatrics Child">
+            <div class="doctor-img-box">
+              <img src="pratish.jpeg" alt="Dr. Sneha Gupta" />
+            </div>
+            <div class="doctor-body">
+              <h3 class="doctor-name">Dr. Pratish Raj</h3>
+              <div class="doctor-spec">Pediatrician</div>
+              <div class="doctor-qual">MBBS, MD (Pediatrics)</div>
+              <div class="doctor-rating">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="rating-text">4.8 (300+)</span>
+              </div>
+              <button class="btn-profile" onclick="openDoctorModal('Dr. Sneha Gupta', 'Pediatrician', 'MBBS, MD (Pediatrics)', '4.8', '300+', 'Caring child specialist dedicated to neonatal intensive care, pediatric immunization, and adolescent medicine.')">
+                View Profile <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 7. WHY CHOOSE US & TESTIMONIAL ================= -->
+    <section class="why-us-section" id="why-us">
+      <div class="container">
+        <div class="why-us-layout">
+          <!-- Left: Why Choose & Stats -->
+          <div class="why-left">
+            <h2 class="section-title">Why Choose MediCare?</h2>
+            <p class="section-subtitle left-align">We are committed to providing the highest standard of healthcare services with compassion and innovation.</p>
+
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-icon-wrap"><i class="fa-solid fa-hospital"></i></div>
+                <div class="stat-number" data-target="25">25+</div>
+                <div class="stat-label">Departments</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon-wrap"><i class="fa-solid fa-user-doctor"></i></div>
+                <div class="stat-number" data-target="150">150+</div>
+                <div class="stat-label">Expert Doctors</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon-wrap"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Emergency Care</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon-wrap"><i class="fa-solid fa-face-smile"></i></div>
+                <div class="stat-number" data-target="50">50K+</div>
+                <div class="stat-label">Happy Patients</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Modern Testimonial Card -->
+          <div class="why-right">
+            <div class="testimonial-card-container">
+              <div class="quote-watermark"><i class="fa-solid fa-quote-left"></i></div>
+              <div class="testimonial-content-wrapper">
+                <div class="testimonial-slider" id="testimonialSlider">
+                  <!-- Slide 1 -->
+                  <div class="testimonial-slide active">
+                    <p class="testimonial-text">
+                      "The care and support I received at MediCare Hospital was exceptional. The doctors and staff were very professional and compassionate. Highly recommended!"
+                    </p>
+                    <div class="patient-profile">
+                      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=150&auto=format&fit=crop" alt="Anita Sinha" class="patient-avatar" />
+                      <div class="patient-details">
+                        <h4 class="patient-name">Anita Sinha</h4>
+                        <span class="patient-role">Patient</span>
+                      </div>
+                      <div class="patient-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Slide 2 -->
+                  <div class="testimonial-slide">
+                    <p class="testimonial-text">
+                      "Booking emergency cardiology checkup was seamless. Dr. Aditya Kumar explained everything patiently. MediCare is undoubtedly the safest hospital for senior citizens."
+                    </p>
+                    <div class="patient-profile">
+                      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop" alt="Rajesh Mathur" class="patient-avatar" />
+                      <div class="patient-details">
+                        <h4 class="patient-name">Rajesh Mathur</h4>
+                        <span class="patient-role">Patient</span>
+                      </div>
+                      <div class="patient-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Slide 3 -->
+                  <div class="testimonial-slide">
+                    <p class="testimonial-text">
+                      "World-class pediatric department! The nurses treated our little girl with utmost tenderness and kindness. Clean facilities and prompt pharmacy service."
+                    </p>
+                    <div class="patient-profile">
+                      <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&auto=format&fit=crop" alt="Meera Patel" class="patient-avatar" />
+                      <div class="patient-details">
+                        <h4 class="patient-name">Meera Patel</h4>
+                        <span class="patient-role">Patient</span>
+                      </div>
+                      <div class="patient-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="carousel-nav-row">
+                  <button class="slider-btn" id="prevSlide" aria-label="Previous Testimonial"><i class="fa-solid fa-chevron-left"></i></button>
+                  <div class="pagination-dots">
+                    <span class="dot active" onclick="jumpSlide(0)"></span>
+                    <span class="dot" onclick="jumpSlide(1)"></span>
+                    <span class="dot" onclick="jumpSlide(2)"></span>
+                  </div>
+                  <button class="slider-btn" id="nextSlide" aria-label="Next Testimonial"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= 8. FOOTER ================= -->
+  <footer class="main-footer" id="contact">
+    <div class="container footer-top">
+      <!-- Column 1: Hospital Brand & Mission -->
+      <div class="footer-col brand-col">
+        <div class="footer-logo">
+          <div class="logo-icon-footer"><i class="fa-solid fa-plus-circle"></i></div>
+          <div>
+            <div class="footer-brand-title">GPR</div>
+            <div class="footer-brand-sub">HOSPITAL</div>
+            <div class="footer-brand-tag">People | Care | Life</div>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Providing world-class healthcare with compassion, innovation and excellence.
+        </p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#doctors">Find a Doctor</a></li>
+          <li><a href="#departments">Departments</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why-us">About Us</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Contact Info -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Contact Information</h4>
+        <div class="contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <a href="tel:18001234567">+91 8083198071</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <a href="mailto:care@medicarehospital.in">care@gprcarehospital.in</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            Infront of SPS Schol, Registry Bazar Sonpur<br>
+            Bihar - 841101, India
+          </div>
+        </div>
+        <a href="https://maps.google.com" target="_blank" rel="noopener" class="direction-link">
+          Get Directions <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- Column 4: Opening Hours & Newsletter -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Opening Hours</h4>
+        <div class="hours-box">
+          <div class="hour-row">
+            <i class="fa-regular fa-clock"></i>
+            <div>
+              <strong>Mon - Sat:</strong> 8:00 AM - 8:00 PM<br>
+              <strong>Sunday:</strong> 8:00 AM - 2:00 PM
+            </div>
+          </div>
+        </div>
+
+        <h4 class="footer-heading mt-4">Subscribe to Our Newsletter</h4>
+        <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bottom copyright -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <div>© 2026 GPR Hospital. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <span>A Healthier Tomorrow Starts Here</span>
+          <span class="sep">|</span>
+          <a href="#">Privacy Policy</a>
+          <span class="sep">|</span>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= MODAL: BOOK APPOINTMENT ================= -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3>Book an Appointment</h3>
+          <p>Consult with our top healthcare specialists</p>
+        </div>
+        <button class="modal-close" onclick="closeBookingModal()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <!-- Update your Appointment Form inside #bookingModal -->
+<form id="appointmentForm" onsubmit="handleBookingSubmit(event)">
+  <div class="form-grid">
+    <div class="form-group">
+      <label for="ptName">Patient Full Name *</label>
+      <input type="text" id="ptName" name="name" required placeholder="e.g. Ramesh Chandra" />
+    </div>
+    <div class="form-group">
+      <label for="ptEmail">Email Address *</label>
+      <input type="email" id="ptEmail" name="email" required placeholder="name@example.com" />
+    </div>
+    <div class="form-group">
+      <label for="ptPhone">Phone Number *</label>
+      <input type="tel" id="ptPhone" name="phone" required placeholder="+91 98765 43210" />
+    </div>
+    <div class="form-group">
+      <label for="ptDept">Select Department *</label>
+      <select id="ptDept" name="department" required onchange="updateDoctorDropdown()">
+        <option value="">-- Choose Department --</option>
+        <option value="Cardiology">Cardiology</option>
+        <option value="Neurology">Neurology</option>
+        <option value="Orthopedics">Orthopedics</option>
+        <option value="Pediatrics">Pediatrics</option>
+        <option value="Gynecology">Gynecology</option>
+        <option value="General Medicine">General Medicine</option>
+        <option value="Oncology">Oncology</option>
+        <option value="Dermatology">Dermatology</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="ptDoctor">Select Doctor</label>
+      <select id="ptDoctor" name="doctor">
+        <option value="Any Available Specialist">Any Available Specialist</option>
+        <option value="Dr. Rohit Sharma">Dr. Aditya Kumar (Cardiology)</option>
+        <option value="Dr. Priya Verma">Dr. Aman Kumar (Neurology)</option>
+        <option value="Dr. Amit Kumar">Dr. Abhay Anand (Orthopedics)</option>
+        <option value="Dr. Sneha Gupta">Dr. Pratish Raj (Pediatrics)</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="ptDate">Preferred Date *</label>
+      <input type="date" id="ptDate" name="date" required />
+    </div>
+    <div class="form-group">
+      <label for="ptTime">Preferred Time Slot *</label>
+      <select id="ptTime" name="time" required>
+        <option value="Morning (09:00 AM - 12:00 PM)">Morning (09:00 AM - 12:00 PM)</option>
+        <option value="Afternoon (01:00 PM - 04:00 PM)">Afternoon (01:00 PM - 04:00 PM)</option>
+        <option value="Evening (05:00 PM - 08:00 PM)">Evening (05:00 PM - 08:00 PM)</option>
+      </select>
+    </div>
+    <div class="form-group full-width">
+      <label for="ptReason">Reason for Visit / Symptoms</label>
+      <textarea id="ptReason" name="reason" rows="3" placeholder="Describe symptoms or reasons for consultation..."></textarea>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline" onclick="closeBookingModal()">Cancel</button>
+    <button type="submit" class="btn btn-primary" id="btnSubmitAppointment">
+      <span id="btnSubmitText">Confirm Appointment</span>
+    </button>
+  </div>
+</form>
+      <div id="bookingSuccessMessage" class="modal-success-alert">
+        <i class="fa-solid fa-circle-check"></i>
+        <h4>Appointment request submitted successfully!</h4>
+        <p>Our hospital coordinator will confirm your slot via SMS/Call within 15 minutes.</p>
+        <button class="btn btn-primary" onclick="closeBookingModal()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: DOCTOR PROFILE ================= -->
+  <div class="modal-overlay" id="docModal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="mDocName">Doctor Name</h3>
+        <button class="modal-close" onclick="closeDocModal()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="doc-modal-body">
+        <div class="doc-badge-dept" id="mDocSpec">Specialty</div>
+        <p><strong>Qualification:</strong> <span id="mDocQual"></span></p>
+        <p><strong>Patient Rating:</strong> <span id="mDocRating"></span> (<span id="mDocReviews"></span>)</p>
+        <p class="bio-text" id="mDocBio"></p>
+        <div class="doc-modal-actions">
+          <button class="btn btn-primary" onclick="closeDocModal(); openBookingModal();">Book with this Doctor</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
